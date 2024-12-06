@@ -12,7 +12,7 @@ security_to_key_bits = {
     256: 15360
 }
 
-# Function to benchmark keypair generation
+# Benchmarks keypair generation
 def benchmark_key_generation():
     rsa_results, dsa_results, ecc_results = [], [], []
     rsa_sizes = [1024, 2048, 3072, 7680, 15360]
@@ -39,7 +39,7 @@ def benchmark_key_generation():
 
     return rsa_results, dsa_results, ecc_results
 
-# Function to benchmark RSA encryption
+# Benchmarks RSA encryption
 def benchmark_rsa_encryption():
     results = []
     plaintext = b"Test message for RSA encryption"
@@ -62,7 +62,7 @@ def benchmark_rsa_encryption():
 
     return results
 
-# Function to benchmark RSA decryption
+# Benchmarks RSA decryption
 def benchmark_rsa_decryption():
     results = []
     plaintext = b"Test message for RSA decryption"
@@ -93,7 +93,7 @@ def benchmark_rsa_decryption():
 
     return results
 
-# Function to benchmark digital signing
+# Benchmarks digital signing
 def benchmark_digital_signing():
     rsa_results, dsa_results, ecc_results = [], [], []
     rsa_sizes = [1024, 2048, 3072, 7680, 15360]
@@ -163,7 +163,7 @@ def benchmark_signature_verification():
 
     return results
 
-# Plotting function
+# Plotting
 def plot_results(data, title, x_label, y_label, legend_labels):
     plt.figure(figsize=(10, 6))
     for label, values in zip(legend_labels, data):
